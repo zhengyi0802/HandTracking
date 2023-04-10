@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">HandTracking</string>
+    <string name="no_camera_access">Please grant camera permissions.</string>
+</resources>

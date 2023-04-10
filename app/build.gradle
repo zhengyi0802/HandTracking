@@ -1,0 +1,46 @@
+plugins {
+    id 'com.android.application'
+}
+
+android {
+    namespace 'com.example.handtracking'
+    compileSdk 33
+
+    defaultConfig {
+        applicationId "com.example.handtracking"
+        minSdk 29
+        targetSdk 33
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: "libs", include: ["*.jar", '*.aar'])
+    implementation 'androidx.appcompat:appcompat:1.6.1'
+    implementation 'com.google.android.material:material:1.8.0'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.camera:camera-core:1.0.2'
+    implementation 'androidx.camera:camera-camera2:1.0.2'
+    implementation 'androidx.camera:camera-lifecycle:1.0.2'
+    implementation 'com.google.protobuf:protobuf-java:4.0.0-rc-2'
+    implementation 'com.google.flogger:flogger:0.7.4'
+    implementation 'com.google.flogger:flogger-system-backend:0.7.4'
+    implementation 'com.google.guava:guava:31.1-jre'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.5'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.5.1'
+}

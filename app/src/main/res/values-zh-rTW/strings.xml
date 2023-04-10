@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">手勢辨識</string>
+    <string name="no_camera_access">請設置攝影機使用權限.</string>
+    </resources>
